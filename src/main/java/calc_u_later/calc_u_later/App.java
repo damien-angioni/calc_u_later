@@ -1,5 +1,6 @@
 package calc_u_later.calc_u_later;
 
+//Import libraries classes
 import javafx.application.Application;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -13,6 +14,8 @@ import javafx.scene.Scene;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+//import program classes
+import calc_u_later.calc_u_later.ZeroButton;
 
 public class App extends Application{
 
@@ -52,7 +55,7 @@ public class App extends Application{
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-    private void button_builder(GridPane root,Font button_font,String button_name,int col,int rows,double height,double width,double instop,double insright,double insbottom,double insleft,int colspan, int rowspan){
+    private void button_builder(Label label,GridPane root,Font button_font,String button_name,int col,int rows,double height,double width,double instop,double insright,double insbottom,double insleft,int colspan, int rowspan){
         Button button = new Button(button_name);
         root.add(button, col, rows,colspan,rowspan);
         button.setFont(button_font);
@@ -60,7 +63,7 @@ public class App extends Application{
         button.setPrefWidth(width);
         root.setMargin(button, new Insets(instop, insright, insbottom,insleft));
         button.setOnAction(e -> {
-            // Your code goes here
+
         });
 
     }
